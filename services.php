@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Sign In</title>
 </head>
@@ -13,44 +13,111 @@
 <body>
     <?php include 'navbar.php'; ?>
     <div class="container my-3">
-        <div class="row">
-            <div class="col-sm-6">
-                <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="Card image cap">
+        <div class="dropdown mx-auto my-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select your desired item
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item drop" href="#">Car</a>
+                <a class="dropdown-item drop" href="#">Items</a>
+            </div>
+        </div>
+        <div class="row car carH carV">
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Sedan</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">100$</p>
+                        <a href="#" class="btn btn-primary">Take Sedan</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="Card image cap">
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Luxury</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">150$</p>
+                        <a href="#" class="btn btn-primary">Take Sedan</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 my-3">
-                <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="Card image cap">
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Coupe</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">200$</p>
+                        <a href="#" class="btn btn-primary">Take Coupe</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 my-3">
-                <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="Card image cap">
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">AWD</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">300$</p>
+                        <a href="#" class="btn btn-primary">Take AWD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row item itemC itemV">
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Sedan</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">100$</p>
+                        <a href="#" class="btn btn-primary">Take Sedan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Luxury</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">150$</p>
+                        <a href="#" class="btn btn-primary">Take Sedan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">Coupe</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">200$</p>
+                        <a href="#" class="btn btn-primary">Take Coupe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <img class="card-img-top" src="https://via.placeholder.com/268x180" alt="Card image cap">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Car Model:</h5>
+                        <p class="card-text">AWD</p>
+                        <h5 class="card-title">Price:</h5>
+                        <p class="card-text text-success">300$</p>
+                        <a href="#" class="btn btn-primary">Take AWD</a>
                     </div>
                 </div>
             </div>
