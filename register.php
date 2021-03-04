@@ -45,7 +45,7 @@
                                 <i class="fa fa-lock"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
                     </div>
                 </div>
                 <div class="form-group">
@@ -56,7 +56,7 @@
                                 <i class="fa fa-check"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
                     </div>
                 </div>
                 
