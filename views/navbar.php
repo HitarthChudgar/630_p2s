@@ -1,7 +1,7 @@
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img width=150px src="./take .png" alt="">
+                <img width=150px src="public/img/take.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -12,10 +12,10 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about.php">About Us</a>
+                        <a class="nav-link" href="/views/about.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="/views/about.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register.php">Sign Up</a>
@@ -27,7 +27,10 @@
                         <a class="nav-link" href="/cart.php">Shopping Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./services-floral.php">Floral Services</a>
+                        <a class="nav-link" href="/views/services-floral.php">Floral Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/views/fetch.php">Search DB</a>
                     </li>
                 </ul>
             </div>

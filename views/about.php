@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="/public/css/about.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -27,7 +27,7 @@
             <!-- Team Member 1 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img  class="dps" src="./hitarth.jpeg" class="card-img-top" alt="...">
+                    <img  class="dps" src="public/img/hitarth.jpeg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Hitarth Chudgar</h5>
                         <div class="card-text text-black-50">Web Developer</div>
@@ -53,7 +53,7 @@
             <!-- Team Member 3 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img class="dps" src="./kushal.jpeg" class="card-img-top" alt="...">
+                    <img class="dps" src="/public/img/kushal.jpeg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Kushal Dalal</h5>
                         <div class="card-text text-black-50">Web Developer</div>
