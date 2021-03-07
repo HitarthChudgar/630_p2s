@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/views/about.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/register.php">Sign Up</a>
+                        <a class="nav-link" href="/register.php">Sign Up/Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Reviews</a>
