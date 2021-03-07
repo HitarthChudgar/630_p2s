@@ -22,7 +22,6 @@ class Config{
 
 class Car extends Config{
 
-    //this function is basically doing the database query for the rows in the car table
     protected function getAllCars(){
         $sql = "SELECT * FROM car";
         $result = $this-> connect()->query($sql);
@@ -35,7 +34,6 @@ class Car extends Config{
         }
     }
 
-    //this function will output the options in the html form
     public function showCarOptions(){
         $datas = $this->getAllCars();
         foreach ($datas as $data){
