@@ -156,7 +156,7 @@ function setTrip() {
 
     //AJAX - this code sends an HTTP request without the submit form using JavaScript.
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "addTripData.php.php");
+    xhr.open("POST", "addTripData.php");
     xhr.onload = function() {
         document.getElementById('response').innerHTML = this.response;
     };

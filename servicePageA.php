@@ -2,7 +2,7 @@
     include 'includes/connect.php';
     include 'includes/car.php';
     include 'includes/flower.php';
-    ?>
+?>
 <!DOCTYPE html>
 <html>
 
