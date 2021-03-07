@@ -27,7 +27,7 @@
                         <a class="nav-link" href="/cart.php">Shopping Cart</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/services.php">Type of Services</a>
+                        <a class="nav-link" href="./services-floral.php">Floral Services</a>
                     </li>
                 </ul>
             </div>
