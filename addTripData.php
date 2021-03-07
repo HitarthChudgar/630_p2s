@@ -7,13 +7,11 @@ $dbname = 'servicesdb';
 
 $conn = new mysqli('localhost', $username,$password,$dbname);
 
-echo "Database Successfully connected";
-
 if (isset($_POST['slat']) && isset($_POST['slng']) && isset($_POST['dlat']) && isset($_POST['dlng']) && isset($_POST['distance']) && isset($_POST['car']) && isset($_POST['price'])) {
-    $sourselat = $_POST['slat'];
-    $sourcelng = $_POST['slng'];
-    $destinationlat = $_POST['dlat'];
-    $destinationlng = $_POST['dlng'];
+    $sourcelat = $_POST['sourcelat'];
+    $sourcelng = $_POST['sourcelng'];
+    $destinationlat = $_POST['destinationlat'];
+    $destinationlng = $_POST['destinationlng'];
     $distance = $_POST['distance'];
     $car = $_POST['car'];
     $price = $_POST['price'];

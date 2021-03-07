@@ -23,7 +23,7 @@ require('config2.php');
     <!-- Map appears here -->
     <div id="map"></div>
     <div id="form">
-        <form onchange="getDataA()"> 
+        <form onchange="serviceAData()"> 
             <label for="car">Choose the Car</label><br>
             <select name="car" id="car" required>
                 <option value="honda"> Honda</option>

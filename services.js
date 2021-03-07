@@ -59,7 +59,7 @@ function initMap(location, location2) {
 
 //this will update the data in the html form according to the input in the form. FOR SERVICE PAGE A
 
-function getdataA(event) { //getting source location (fixed for now)
+function serviceAData(event) {
     var sourcelocation = {
 
         lat: Number(document.getElementById('slat').value),
@@ -143,7 +143,7 @@ function getdata() { //getting source location (fixed for now)
 //sending post request with javascript for servicepageA - add new row to trip table.
 
 function setTrip() {
-    var dataObject = getdataA();
+    var dataObject = serviceAData();
     //data
     var data = new FormData();
     data.append("slat", dataObject.slat);
@@ -156,7 +156,7 @@ function setTrip() {
 
     //AJAX - this code sends an HTTP request without the submit form using JavaScript.
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "addTripData.php.php");
+    xhr.open("POST", "addTripData.php");
     xhr.onload = function() {
         document.getElementById('response').innerHTML = this.response;
     };
