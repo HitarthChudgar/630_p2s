@@ -1,79 +1,144 @@
+<?php
+// Include config file
+require_once "config.php";
+
+// Define variables and initialize with empty values
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
+
+// Processing form data when form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Validate username
+    if (empty(trim($_POST["username"]))) {
+        $username_err = "Please enter a username.";
+    } else {
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE username = ?";
+
+        if ($stmt = $mysqli->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("s", $param_username);
+
+            // Set parameters
+            $param_username = trim($_POST["username"]);
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                // store result
+                $stmt->store_result();
+
+                if ($stmt->num_rows == 1) {
+                    $username_err = "This username is already taken.";
+                } else {
+                    $username = trim($_POST["username"]);
+                }
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            $stmt->close();
+        }
+    }
+
+    // Validate password
+    if (empty(trim($_POST["password"]))) {
+        $password_err = "Please enter a password.";
+    } elseif (strlen(trim($_POST["password"])) < 6) {
+        $password_err = "Password must have atleast 6 characters.";
+    } else {
+        $password = trim($_POST["password"]);
+    }
+
+    // Validate confirm password
+    if (empty(trim($_POST["confirm_password"]))) {
+        $confirm_password_err = "Please confirm password.";
+    } else {
+        $confirm_password = trim($_POST["confirm_password"]);
+        if (empty($password_err) && ($password != $confirm_password)) {
+            $confirm_password_err = "Password did not match.";
+        }
+    }
+
+    // Check input errors before inserting in database
+    if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
+
+        // Prepare an insert statement
+        $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+
+        if ($stmt = $mysqli->prepare($sql)) {
+            // Bind variables to the prepared statement as parameters
+            $stmt->bind_param("ss", $param_username, $param_password);
+
+            // Set parameters
+            $param_username = $username;
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+
+            // Attempt to execute the prepared statement
+            if ($stmt->execute()) {
+                // Redirect to login page
+                header("location: login.php");
+            } else {
+                echo "Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            $stmt->close();
+        }
+    }
+
+    // Close connection
+    $mysqli->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="register.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Sign In</title>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body {
+            font: 14px sans-serif;
+        }
+
+        .wrapper {
+            width: 350px;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
-    <div class="container">
-        <div class="signup-form">
-            <form action="/examples/actions/confirmation.php" method="post">
-                <h2>Sign Up</h2>
-                <p>Please fill in this form to create an account!</p>
-                <hr>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <span class="fa fa-user"></span>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" name="username" placeholder="Username" required="required">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fa fa-paper-plane"></i>
-                            </span>
-                        </div>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fa fa-lock"></i>
-                            </span>
-                        </div>
-                        <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fa fa-lock"></i>
-                                <i class="fa fa-check"></i>
-                            </span>
-                        </div>
-                        <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
-                    </div>
-                </div>
-                
-                <div style="text-align: center;" class="form-group">
-                    <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
-                </div>
-            </form>
-            <div class="text-center">Already have an account? <a href="signin.php">Login here</a></div>
-        </div>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
+    <div class="wrapper">
+        <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </div>
 </body>
 
 </html>
