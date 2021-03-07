@@ -30,6 +30,9 @@
                         <a class="nav-link" href="/views/services-floral.php">Floral Services</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="./../services.php">Car Services</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/views/fetch.php">Search DB</a>
                     </li>
                 </ul>

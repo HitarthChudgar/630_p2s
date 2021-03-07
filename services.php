@@ -16,7 +16,7 @@ require('config2.php');
 </head>
 
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php include 'views/navbar.php'; ?>
     
  
 
