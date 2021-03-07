@@ -27,7 +27,7 @@
             <!-- Team Member 1 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img  class="dps" src="/public/img/hitarth.jpeg" class="card-img-top" alt="...">
+                    <img  class="dps" src="/public/asset/hitarth.jpeg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Hitarth Chudgar</h5>
                         <div class="card-text text-black-50">Web Developer</div>
@@ -53,7 +53,7 @@
             <!-- Team Member 3 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img class="dps" src="/public/img/kushal.jpeg" class="card-img-top" alt="...">
+                    <img class="dps" src="/public/asset/kushal.jpeg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Kushal Dalal</h5>
                         <div class="card-text text-black-50">Web Developer</div>
