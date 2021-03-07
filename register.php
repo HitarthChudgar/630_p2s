@@ -3,8 +3,9 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = "";
-$username_err = $password_err = $confirm_password_err = "";
+$username = $password = $confirm_password = $address = "";
+$username_err = $password_err = $confirm_password_err=$address_err = "";
+
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -131,6 +132,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label>Address</label>
+                <input type="text" name="address" class="form-control" value="<?php echo $address; ?>">
+                <span class="help-block"><?php echo $address_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
