@@ -1,4 +1,6 @@
 //this will set the map and return the distance
+
+
 //INIT MAP is stupid, just know it takes 2 locations and returns the distance between them.
 
 function initMap(location, location2) {
@@ -59,7 +61,8 @@ function initMap(location, location2) {
 
 //this will update the data in the html form according to the input in the form. FOR SERVICE PAGE A
 
-function getdataA(event) { //getting source location (fixed for now)
+function getdataA() { //getting source location (fixed for now)
+
     var sourcelocation = {
 
         lat: Number(document.getElementById('slat').value),
@@ -71,17 +74,11 @@ function getdataA(event) { //getting source location (fixed for now)
         lng: Number(document.getElementById('dlng').value),
     };
 
-
-    var cars = {
-        tesla:15,
-        honda:7,
-        bmw:12
-    }
     var carID = document.getElementById("car").value; //getting car info from form
-    var carPrice = cars[carID]; //defining car price
+    var carPrice = 10; //defining car price
     var datetime = document.getElementById("datetime"); //getting datetime from form
     var distance = initMap(sourcelocation, destinationlocation); //map
-    var totalPrice = Number(cars[carID] * distance);
+    var totalPrice = Number(carPrice * distance);
 
 
     // Updating the values of the map and text
@@ -95,7 +92,7 @@ function getdataA(event) { //getting source location (fixed for now)
 
     //this dataObject is being used by setTrip() to get form data and send it to the trip table
     //can be used by other functions as well to get form data.
-    var data = {
+    var dataObject = {
         slat: sourcelocation.lat,
         slng: sourcelocation.lng,
         dlat: destinationlocation.lat,
@@ -105,10 +102,68 @@ function getdataA(event) { //getting source location (fixed for now)
         price: totalPrice
     };
 
-    return data
+    return dataObject
 };
 
 
+
+
+function getdataB() { //getting source location (fixed for now)
+
+    var sourcelocation = {
+
+        lat: Number(document.getElementById('slat').value),
+        lng: Number(document.getElementById('slng').value),
+    };
+
+
+    var shoppingcart = document.getElementById('shoppingcart').firstChild.innerHTML;
+
+
+
+    console.log(shoppingcart);
+    /*
+    var shopdata = shopvalue.split(',');
+
+    console.log(shopdata);
+
+    var destinationlocation = {
+
+        lat: Number(shopdata[2]),
+        lng: Number(shopdata[3]),
+    };
+    */
+
+    var carID = document.getElementById("car").value; //getting car info from form
+    var carPrice = 10; //defining car price
+    var datetime = document.getElementById("datetime"); //getting datetime from form
+    var distance = initMap(sourcelocation, destinationlocation); //map
+    var totalPrice = Number(carPrice * distance);
+
+
+    // Updating the values of the map and text
+    document.getElementById('distanceText').innerHTML = distance.toFixed(2) + " km."; //distance
+    document.getElementById("datetimeText").innerHTML = datetime.value.toString(); //date
+    document.getElementById("carID").innerHTML = carID; //car
+    document.getElementById("carPriceText").innerHTML = "$" + carPrice; //carprice
+
+    //totalprice
+    document.getElementById('totalPriceText').innerHTML = "$" + totalPrice.toFixed(2);
+
+    //this dataObject is being used by setTrip() to get form data and send it to the trip table
+    //can be used by other functions as well to get form data.
+    var dataObject = {
+        slat: sourcelocation.lat,
+        slng: sourcelocation.lng,
+        dlat: destinationlocation.lat,
+        dlng: destinationlocation.lng,
+        distance: distance,
+        car: carID,
+        price: totalPrice
+    };
+
+    return dataObject
+};
 
 
 //this will update the data in the html form according to the input in the form (SHOPS).
@@ -156,9 +211,27 @@ function setTrip() {
 
     //AJAX - this code sends an HTTP request without the submit form using JavaScript.
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "addTripData.php.php");
+    xhr.open("POST", "setTrip.php");
     xhr.onload = function() {
+        console.log(this.response);
         document.getElementById('response').innerHTML = this.response;
     };
     xhr.send(data);
+}
+
+
+//For the Drop container
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
