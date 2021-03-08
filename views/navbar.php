@@ -24,9 +24,6 @@
                         <a class="nav-link" href="#">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cart.php">Shopping Cart</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/views/services-floral.php">Floral Services</a>
                     </li>
                     <li class="nav-item">
