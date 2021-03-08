@@ -23,9 +23,9 @@ $result = $con->query($sql);
 </head>
 
 <body>
-    <?php include 'views\navbar.php'; ?>
-    <div class="container">
-        <label>Search Flowers</label>
+    <?php include 'navbar.php'; ?>
+    <div class="container col-md-4 col-md-offset-4">
+        <label class="font-weight-bold my-3">Search Flowers</label>
         <form action="" method="GET">
             <input type="text" placeholder="Type the id here" name="search">&nbsp;
             <input type="submit" value="Search" name="btn" class="btn btn-sm btn-primary">

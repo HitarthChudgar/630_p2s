@@ -7,23 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <title>DB Search</title>
 </head>
 
 <body>
   <?php include 'navbar.php'; ?>
-  <div class="container mx-auto my-3">
-    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-      <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-      <a class="btn btn-outline-primary" for="btncheck1" href="#">User Search</a>
-
-      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-      <a class="btn btn-outline-primary" for="btncheck2" href="/views/search/fetch_trip.php">Trip Search</a>
-
-      <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-      <a class="btn btn-outline-primary" for="btncheck3" href="/views/search/fetch_flower.php">Flower Search</a>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center my-3">
+        <a href="£" class="btn btn-primary">User Search</a>
+        <a href="search\fetch_trip.php" class=" btn btn-primary">Car Search</a>
+        <a href="search\fetch_flower.php" class=" btn btn-primary">Flower Search</a>
+      </div>
     </div>
   </div>
 

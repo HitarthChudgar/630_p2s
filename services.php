@@ -18,8 +18,8 @@ require('views/config.php');
 <body>
     <?php include 'views/navbar.php'; ?>
     <!-- Map appears here -->
-    <div id="map" class="my-3"></div>
-    <div id="form">
+    <div id="map" class="d-flex align-items-center justify-content-center my-3"></div>
+    <div id="form" class="d-flex align-items-center justify-content-center">
         <form onchange="serviceAData()">
             <label for="car">Choose the Car</label><br>
             <select name="car" id="car" required>
@@ -31,37 +31,37 @@ require('views/config.php');
             <table id="picklocation">
                 <td>
                     <label for="dlat">Destination Latitude</label><br>
-                    <input type="number" id="dlat" name="dlat"><br><br>
+                    <input class="form-control" type="number" id="dlat" name="dlat"><br><br>
                 </td>
                 </td>
 
                 <td>
                     <label for="dlng">Destination Longitude</label><br>
-                    <input type="number" id="dlng" name="dlng"><br><br>
+                    <input class="form-control" type="number" id="dlng" name="dlng"><br><br>
                 </td>
                 </tr>
                 <tr>
                     <td>
                         <label for="slat">Source Latitude</label><br>
-                        <input type="number" id="slat" name="slat"><br><br>
+                        <input class="form-control" type="number" id="slat" name="slat"><br><br>
                     </td>
                     </td>
 
                     <td>
                         <label for="slng">Source Longitude</label><br>
-                        <input type="number" id="slng" name="slng"><br><br>
+                        <input class="form-control" type="number" id="slng" name="slng"><br><br>
                     </td>
                 </tr>
             </table>
 
             <label for="datetime">Date and Time</label>
-            <input type="datetime-local" id="datetime" name="datetime">
+            <input class="form-control" type="datetime-local" id="datetime" name="datetime">
         </form>
     </div>
 
     <!-- End of Form Code-->
 
-    <div id="order">
+    <div id="order" class="d-flex align-items-center justify-content-center">
         <table>
             <tr>
                 <th>Date</th>
@@ -88,10 +88,13 @@ require('views/config.php');
                 </td>
             </tr>
         </table>
-        <button id="post-btn" type="button" onclick="setTrip()">Place Order</button>
-
-        <h2 id="response" class="my-3"></h2>
     </div>
+    <div class="text-center">
+        <button class="btn btn-primary" id="post-btn" type="button" onclick="setTrip()">Place Order</button>
+    </div>
+
+
+    <h2 id="response" class="d-flex align-items-center justify-content-center my-3 text-success"></h2>
 
 
 
