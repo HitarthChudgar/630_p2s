@@ -8,11 +8,17 @@
     background-size: cover;
   }
 .container-order{
-    margin: 0 auto !important;
+    text-align: center;
 }
   
   .order-button{
       font-size: 30px;
       width: 30vw;
       height:90px;
+      margin: 20px auto;
   }
+
+  .order-button a{
+text-decoration: none;
+color: white;
+}

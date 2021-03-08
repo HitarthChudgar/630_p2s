@@ -19,11 +19,11 @@
     
     <header>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
+    <!-- <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
+    </ol> -->
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
@@ -39,14 +39,6 @@
           <p class="lead">First 100 customers get a 20% off use coupon code TAKE20</p>
         </div>
       </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
   </div>
 </header>
 
@@ -55,8 +47,8 @@
   <div class="container">
     <h1 class="display-4">We have the following services active right now!</h1>
     <div class="order-container">    
-        <button class="btn btn-dark order-button">Order a Cab!</button>
-    <button class="btn btn-dark order-button">Order Flowers!</button>
+        <button class="btn btn-dark order-button"> <a href="services.php"> Order a Cab!</a></button>
+    <button class="btn btn-dark order-button"> <a href="views/services-floral.php">Order Flowers!</a> </button>
 </div>
 
      </div>
