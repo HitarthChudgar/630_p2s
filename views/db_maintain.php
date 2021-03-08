@@ -18,7 +18,7 @@
     <div class="row">
       <div class="col text-center my-3">
         <a href="crud\crud_user.php" class="btn btn-primary">User Maintain</a>
-        <a href="search\fetch_trip.php" class=" btn btn-primary">Car Maintain</a>
+        <a href="crud\crud_car.php" class=" btn btn-primary">Car Maintain</a>
         <a href="crud\crud_flower.php" class=" btn btn-primary">Flower Maintain</a>
       </div>
     </div>
