@@ -1,6 +1,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/index.php">
                 <img width=150px src="/public/asset/take.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
                         <a class="nav-link" href="/models/register.php">Sign Up/Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reviews</a>
+                        <a class="nav-link" href="/views/reviews.php">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/views/services-floral.php">Floral Services</a>
