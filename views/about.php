@@ -27,39 +27,33 @@
             <!-- Team Member 1 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img  class="dps" src="/public/asset/hitarth.jpeg" class="card-img-top" alt="...">
+                    <img  class="dps card-img-top" src="/public/asset/hitarth.jpeg" alt="Hitarth Chudgat">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Hitarth Chudgar</h5>
                         <div class="card-text text-black-50">Web Developer</div>
-                        <div class="card-text text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                            omnis, unde aliquam tempore sequi distinctio assumenda consequatur laborum eligendi hic odit
-                            voluptatum reprehenderit ipsa error. Accusantium, alias. Pariatur, ullam! Ea!</div>
+                        <div class="card-text text-black-50">Email: hitarth.chudgar@ryerson.ca</div>
                     </div>
                 </div>
             </div>
             <!-- Team Member 2 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img class="dps" src="https://lh3.googleusercontent.com/CnO3Q9m5lUPiDz6Yg3WaPmAIMHhNdJehlbJvow2YM2_rbw90tocHXA9D0gxw8J_r_reF2oQb2v5-Jux7Hh2JuqnW5a8SDCgF21gwGQYBp7yvYHtGM_IdXPyDcij0rNXth_Hu3RYd4TnBMcQuXkMbfZtiNuDxFG8LeIKT08iiHY0va87ECRhQGl44Nrn6f3vQ40w7A-KrqZkb3DV9SjUjQqPNy8mZKX0xMIuVa_vamR7Z4p3Rel369ynfhN7b6O3rX3upyXgde-vedwYwcqe4IhuaiZlQ4GQQzLzjcJ-jPgrs9NbZ8QcrdiYJbGbBhNN-QNbnKaqKqqjzly0VdLTA-dExFcgh-ksh_RvkTMxnZ1cE7aNOiZb7VFe3dabkKTuA6m5coY6cGRYPIAxQa5WwoVkgpNGsqPMj6dT269k4Eu8r3QiUxb8jzs7ttSSXAvlL-sKa59fuW1QmKAm39PzGG7Qsu1W2YBD3qfKXfZrKZEz2KpSjFHn08YeKu8hBvo-sI0lmvK1IXOxfSQl5NezChJ3eU9cngI36lZRrX0uPMG3LdUQMlxHrEvByLMTClVoFlTiGxIMZAld3AKkX77PzX-u6OXB6izyNSumaEwcwbrE8F2KXDbko5iq6JVgha2cItJEw7nq9rzFIoEADGDHvjHzusWOpa49OIpd6fGNYSF0CncvjdsPeGDeWvU5pGac=w419-h635-no?authuser=0"card-img-top" alt="...">
+                    <img class="dps" src="/public/asset/creatorofPHP.jpg"card-img-top" alt="Parth Patel">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Parth Patel</h5>
-                        <div class="card-text text-black-50">Machine Learning Enthusiast</div>
-                        <div class="card-text text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                            omnis, unde aliquam tempore sequi distinctio assumenda consequatur laborum eligendi hic odit
-                            voluptatum reprehenderit ipsa error. Accusantium, alias. Pariatur, ullam! Ea!</div>
+                        <div class="card-text text-black-50">Front End Developer</div>
+                        <div class="card-text text-black-50">Email: p13patel@ryerson.ca</div>
                     </div>
                 </div>
             </div>
             <!-- Team Member 3 -->
             <div class="col">
                 <div class="card border-0 shadow">
-                    <img class="dps" src="/public/asset/kushal.jpeg" class="card-img-top" alt="...">
+                    <img class="dps card-img-top" src="/public/asset/kushal.jpeg" alt="Kushal Dalal">
                     <div class="card-body text-center">
                         <h5 class="card-title mb-0">Kushal Dalal</h5>
                         <div class="card-text text-black-50">Web Developer</div>
-                        <div class="card-text text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                            omnis, unde aliquam tempore sequi distinctio assumenda consequatur laborum eligendi hic odit
-                            voluptatum reprehenderit ipsa error. Accusantium, alias. Pariatur, ullam! Ea!</div>
+                        <div class="card-text text-black-50">Email: kushal.dalal@ryerson.ca</div>
                     </div>
                 </div>
             </div>
