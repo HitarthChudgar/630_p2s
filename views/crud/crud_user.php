@@ -34,15 +34,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Flower Table</h2>
-                        <a href="/views/create_flower.php" class="btn btn-success pull-right">Add New Flower</a>
+                        <h2 class="pull-left">User Table</h2>
+                        <a href="create_user.php" class="btn btn-success pull-right">Add New User</a>
                     </div>
                     <?php
                     // Include config file
                     require_once "config.php";
 
                     // Attempt select query execution
-                    $sql = "SELECT * FROM flowers";
+                    $sql = "SELECT * FROM users";
                     if ($result = $mysqli->query($sql)) {
                         if ($result->num_rows > 0) {
                             echo "<table class='table table-bordered table-striped'>";
@@ -50,22 +50,24 @@
                             echo "<tr>";
                             echo "<th>#</th>";
                             echo "<th>Name</th>";
-                            echo "<th>Store Code</th>";
-                            echo "<th>Price</th>";
+                            echo "<th>Telephone</th>";
+                            echo "<th>Email</th>";
+                            echo "<th>City Code</th>";
                             echo "<th>Action</th>";
                             echo "</tr>";
                             echo "</thead>";
                             echo "<tbody>";
                             while ($row = $result->fetch_array()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['flowerid'] . "</td>";
-                                echo "<td>" . $row['name'] . "</td>";
-                                echo "<td>" . $row['storecode'] . "</td>";
-                                echo "<td>" . $row['price'] . "</td>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['username'] . "</td>";
+                                echo "<td>" . $row['telno'] . "</td>";
+                                echo "<td>" . $row['email'] . "</td>";
+                                echo "<td>" . $row['citycode'] . "</td>";
                                 echo "<td>";
-                                echo "<a href='read_flower.php?flowerid=" . $row['flowerid'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                echo "<a href='update_flower.php?flowerid=" . $row['flowerid'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                echo "<a href='delete_flower.php?flowerid=" . $row['flowerid'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                echo "<a href='read_user.php?id=" . $row['id'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                echo "<a href='update_user.php?id=" . $row['id'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                echo "<a href='delete_user.php?id=" . $row['id'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                 echo "</td>";
                                 echo "</tr>";
                             }

@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/views/about.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/models/register.php">Sign Up/Sign In</a>
+                        <a class="nav-link" href="/register.php">Sign Up/Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Reviews</a>
@@ -31,9 +31,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/views/searchdb.php">Search DB</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/views/db_maintain.php">Maintain DB</a>
                     </li>
                 </ul>
             </div>

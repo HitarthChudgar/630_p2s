@@ -146,10 +146,10 @@ function setTrip() {
     var dataObject = serviceAData();
     //data
     var data = new FormData();
-    data.append("slat", dataObject.slat);
-    data.append("slng", dataObject.slng);
-    data.append("dlat", dataObject.dlat);
-    data.append("dlng", dataObject.dlng);
+    data.append("sourcelat", dataObject.slat);
+    data.append("sourcelng", dataObject.slng);
+    data.append("destinationlat", dataObject.dlat);
+    data.append("destinationlng", dataObject.dlng);
     data.append("distance", dataObject.distance);
     data.append("car", dataObject.car);
     data.append("price", dataObject.price);
