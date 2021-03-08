@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>DB Search</title>
+  <title>DB Maintain</title>
 </head>
 
 <body>
@@ -17,9 +17,9 @@
   <div class="container">
     <div class="row">
       <div class="col text-center my-3">
-        <a href="search\fetch_user.php" class="btn btn-primary">User Search</a>
-        <a href="search\fetch_trip.php" class=" btn btn-primary">Car Search</a>
-        <a href="search\fetch_flower.php" class=" btn btn-primary">Flower Search</a>
+        <a href="#" class="btn btn-primary">User Maintain</a>
+        <a href="search\fetch_trip.php" class=" btn btn-primary">Car Maintain</a>
+        <a href="crud\crud_flower.php" class=" btn btn-primary">Flower Maintain</a>
       </div>
     </div>
   </div>

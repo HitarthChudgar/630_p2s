@@ -3,6 +3,14 @@
 <?php
 include 'car.php';
 require('views/config.php');
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: models\login.php");
+    exit;
+}
 ?>
 
 <head>
@@ -17,6 +25,12 @@ require('views/config.php');
 
 <body>
     <?php include 'views/navbar.php'; ?>
+    <div class="page-header d-flex align-items-center justify-content-center my-3">
+        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our services.</h1>
+    </div>
+    <div class="text-center">
+        <a href="models\logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+    </div>
     <!-- Map appears here -->
     <div id="map" class="d-flex align-items-center justify-content-center my-3"></div>
     <div id="form" class="d-flex align-items-center justify-content-center">
