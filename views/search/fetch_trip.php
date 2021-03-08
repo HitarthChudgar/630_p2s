@@ -9,8 +9,8 @@ if ($con->connect_error) {
 }
 $sql = "SELECT * FROM trip";
 if (isset($_GET['search'])) {
-    $car = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
-    $sql = "SELECT * FROM trip WHERE car ='$car'";
+    $tripid = mysqli_real_escape_string($con, htmlspecialchars($_GET['search']));
+    $sql = "SELECT * FROM trip WHERE tripid ='$tripid'";
 }
 $result = $con->query($sql);
 ?>
@@ -27,11 +27,12 @@ $result = $con->query($sql);
     <div class="container col-md-4 col-md-offset-4">
         <label class="font-weight-bold my-3">Search Trips</label>
         <form action="" method="GET">
-            <input type="text" placeholder="Type the car model here" name="search">&nbsp;
+            <input type="text" placeholder="Type the id here" name="search">&nbsp;
             <input type="submit" value="Search" name="btn" class="btn btn-sm btn-primary">
         </form>
         <table class="table table-striped table-responsive fixed-bottom">
             <tr>
+                <th>Trip ID</th>
                 <th>Source Lat</th>
                 <th>Source Lng</th>
                 <th>Destination Lat</th>
@@ -44,6 +45,7 @@ $result = $con->query($sql);
             while ($row = $result->fetch_assoc()) {
             ?>
                 <tr>
+                    <td><?php echo $row['tripid']; ?></td>
                     <td><?php echo $row['sourcelat']; ?></td>
                     <td><?php echo $row['sourcelng']; ?></td>
                     <td><?php echo $row['destinationlat']; ?></td>
