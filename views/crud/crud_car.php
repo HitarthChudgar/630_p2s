@@ -35,7 +35,7 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Trips Table</h2>
-                        <a href="create_flower.php" class="btn btn-success pull-right">Add New Car</a>
+                        <a href="create_car.php" class="btn btn-success pull-right">Add New Trip</a>
                     </div>
                     <?php
                     // Include config file
@@ -48,10 +48,7 @@
                             echo "<table class='table table-bordered table-striped'>";
                             echo "<thead>";
                             echo "<tr>";
-                            echo "<th>Source Lat</th>";
-                            echo "<th>Source Lng</th>";
-                            echo "<th>Destination Lat</th>";
-                            echo "<th>Destination Lng</th>";
+                            echo "<th>#</th>";
                             echo "<th>Distance</th>";
                             echo "<th>Car</th>";
                             echo "<th>Price</th>";
@@ -61,17 +58,14 @@
                             echo "<tbody>";
                             while ($row = $result->fetch_array()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['sourcelat'] . "</td>";
-                                echo "<td>" . $row['sourcelng'] . "</td>";
-                                echo "<td>" . $row['destinationlat'] . "</td>";
-                                echo "<td>" . $row['destinationlng'] . "</td>";
+                                echo "<td>" . $row['tripid'] . "</td>";
                                 echo "<td>" . $row['distance'] . "</td>";
                                 echo "<td>" . $row['car'] . "</td>";
                                 echo "<td>" . $row['price'] . "</td>";
                                 echo "<td>";
-                                echo "<a href='read_car.php?car=" . $row['car'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                echo "<a href='update_car.php?car=" . $row['car'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                echo "<a href='delete_car.php?car=" . $row['car'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                echo "<a href='read_car.php?tripid=" . $row['tripid'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                echo "<a href='update_car.php?tripid=" . $row['tripid'] . "' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
+                                echo "<a href='delete_car.php?tripid=" . $row['tripid'] . "' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                 echo "</td>";
                                 echo "</tr>";
                             }
